@@ -1,0 +1,27 @@
+{% extends 'base/base.html' %}
+{% load static%}
+{% block content %}
+   <!-- Page Banner Start -->
+   <section class="page-banner-area rel z-1 text-white text-center" style="background-image: url({% static 'core/images/banner.jpg'%});">
+    <div class="container">
+        <div class="banner-inner rpt-10">
+            <form method="post">
+                {% csrf_token %}
+     
+ 
+                <h4>Are you sure you want to delete "{{ object }}"?</h4>
+                 
+                 
+                <button type="submit" value="Confirm" class="theme-btn"> Delete<i class="fas"></i></button>
+                </form>
+        
+        </div>
+        
+    </div>
+    <img class="circle-one" src="{% static 'core/images/shapes/circle-one.png'%}" alt="Circle">
+    <img class="circle-two" src="{% static 'core/images/shapes/circle-two.png'%}" alt="Circle">
+</section>
+<!-- Page Banner End -->
+
+
+{% endblock  %}

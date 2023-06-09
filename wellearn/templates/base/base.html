@@ -1,0 +1,358 @@
+{% load static costum_tags%}
+<!DOCTYPE html>
+
+<html lang="az">
+
+
+<head>
+<!--====== Required meta tags ======-->
+<meta charset="utf-8" />
+<meta name="description" content="" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!--====== Title ======-->
+<title>{{settings.title}}</title>
+<!--====== Favicon Icon ======-->
+<link rel="shortcut icon" href="{% static 'core/images/favicon.png'%}" type="image/x-icon">
+<!--====== Google Fonts ======-->
+<link href="../../../fonts.googleapis.com/css23d7c.css?family=Mulish:wght@400;500;600;700&amp;family=Oswald:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+
+<!--====== Flaticon ======-->
+<link rel="stylesheet" href="{% static 'core/css/flaticon.min.css'%}">
+<!--====== Font Awesome ======-->
+<link rel="stylesheet" href="{% static 'core/css/font-awesome-5.9.0.min.css'%}">
+<!--====== Bootstrap ======-->
+<link rel="stylesheet" href="{% static 'core/css/bootstrap-4.5.3.min.css'%}">
+<!--====== Magnific Popup ======-->
+<link rel="stylesheet" href="{% static 'core/css/magnific-popup.min.css'%}">
+<!--====== Nice Select ======-->
+<link rel="stylesheet" href="{% static 'core/css/nice-select.min.css'%}">
+<!--====== jQuery UI ======-->
+<link rel="stylesheet" href="{% static 'core/css/jquery-ui.min.css'%}">
+<!--====== Animate ======-->
+<link rel="stylesheet" href="{% static 'core/css/animate.min.css'%}">
+<!--====== Slick ======-->
+<link rel="stylesheet" href="{% static 'core/css/slick.min.css'%}">
+<!--====== Main Style ======-->
+<link rel="stylesheet" href="{% static 'core/css/style.css'%}">
+
+<link rel="stylesheet" href="{% static 'core/css/teze.css'%}">
+{% comment %} <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"> {% endcomment %}
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</head>
+<body class="home-one">
+<div class="page-wrapper">
+
+<!-- Preloader -->
+<div class="preloader"></div>
+
+<!-- main header -->
+<header class="main-header">
+    <!-- Header-Top -->
+    <div class="header-top bg-light-blue text-white">
+        <div class="container-fluid">
+            <div class="top-inner">
+                <div class="top-left">
+                    <p><i class="far fa-clock"></i> <b>Working Hours</b> : Manday - Friday, 08am - 05pm</p>
+                </div>
+                <div class="top-right d-flex align-items-center">
+                    <div class="social-style-two">
+                        <a target='_blank' href="{{settings.twitter}}"><i class="fab fa-twitter"></i></a>
+                        <a target='_blank' href="{{settings.facebook}}"><i class="fab fa-facebook-f"></i></a>
+                        <a target='_blank' href="{{settings.instagram}}"><i class="fab fa-instagram"></i></a>
+                        <a target='_blank' href="{{settings.pinterest}}"><i class="fab fa-pinterest-p"></i></a>
+                    </div>
+                    <ul class="top-menu">
+                        <li><a href="about.html">Setting & Privacy</a></li>
+                        <li><a href="faqs.html">Faqs</a></li>
+                        <li><a href="{% url 'about' %}">About</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Header-Upper -->
+    <div class="header-upper">
+        <div class="container-fluid clearfix">
+
+            <div class="header-inner d-flex align-items-center justify-content-between">
+                <div class="logo-outer d-lg-flex align-items-center">
+                    <div class="logo"><a href="{% url 'home' %}"><img src="{{settings.logo.url}}" alt="Logo" title="Logo"></a></div>
+                    <select name="select-languages" id="select-languages">
+                        <option value="English">Eng</option>
+                        <option value="Russian">Rus</option>
+                        <option value="Azerbaijani">Aze</option>
+                        <option value="Turkish">Tur</option>
+                    </select>
+                </div>
+
+                <div class="nav-outer clearfix">
+                    <!-- Main Menu -->
+                    <nav class="main-menu navbar-expand-lg">
+                        <div class="navbar-header">
+                            <div class="mobile-logo bg-green br-10 p-15">
+                                <a href="{% url 'home' %}">
+                                    <img src="{%static 'core/images/logos/logo.png'%}" alt="Logo" title="Logo">
+                                </a>
+                            </div>
+                            
+                            <!-- Toggle Button -->
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                        </div>
+
+                        <div class="navbar-collapse collapse clearfix">
+                            <ul class="navigation clearfix">
+                                <li><a href="{% url 'home' %}">home</a></li>
+                                <li><a href="{% url 'about' %}">About</a></li>
+                                <li class="dropdown"><a href="#">Courses</a>
+                                    <ul>
+                                        <li><a href="course-grid.html">course grid</a></li>
+                                        <li><a href="course-list.html">course list</a></li>
+                                        <li><a href="course-timeline.html">course timeline</a></li>
+                                        <li><a href="course-details.html">course details</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown"><a href="#">pages</a>
+                                    <ul>
+                                        <li><a href="faqs.html">FAQ's</a></li>
+                                        <li class="dropdown"><a href="#">shop</a>
+                                            <ul>
+                                                <li><a href="shop.html">product Page</a></li>
+                                                <li><a href="product-details.html">product details</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown"><a href="#">instructors</a>
+                                            <ul>
+                                                <li><a href="instructors.html">all instructors</a></li>
+                                                <li><a href="become-instructor.html">become instructor</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="gallery.html">gallery</a></li>
+                                        <li><a href="pricing.html">pricing plan</a></li>
+                                        <li><a href="contact.html">contact us</a></li>
+                                        <li><a href="404.html">error Page</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="{% url 'blogs' %}">Blogs</a>                                </li>
+                            </ul>
+                        </div>
+
+                    </nav>
+                    <!-- Main Menu End-->
+                </div>
+                
+                <!-- Menu Button -->
+                <div class="menu-btn-sidebar d-flex align-items-center">
+                    <form action="#">
+                        <input type="search" placeholder="Search" required>
+                        <button><i class="fas fa-search"></i></button>
+                    </form>
+                    <div class="m-4">
+                        {% if user.is_authenticated %}
+                        <div class="dropdown">
+                            <a href="#"  class="dropdown-toggle" data-bs-toggle="dropdown">{{ user.get_full_name|title }}</a>
+                            <div class="dropdown-menu">
+                                <a href="{% url 'blog_create' %}" class="dropdown-item">Create blog</a>
+                                <a href="{% url 'my_blogs' %}" class="dropdown-item">My blogs</a>
+                                <a href="{% url 'logout' %}" class="dropdown-item">Log out</a>
+                            </div>
+                        </div>
+                        {% else %}
+                        <a href="{% url 'login' %}" >Log in</a>
+                        <a class="ml-2" href="{% url 'register' %}" >Sign up</a>
+                        {% endif %}
+
+                    </div>
+
+                        
+                        
+                    <!-- menu sidbar -->
+                    <div class="menu-sidebar">
+                        <button>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End Header Upper-->
+</header>
+
+
+<!--Form Back Drop-->
+<div class="form-back-drop"></div>
+
+<!-- Hidden Sidebar -->
+<section class="hidden-bar">
+    <div class="inner-box text-center">
+        <div class="cross-icon"><span class="fa fa-times"></span></div>
+        <div class="title">
+            <h4>Get Appointment</h4>
+        </div>
+
+        <!--Appointment Form-->
+        <div class="appointment-form">
+            <form method="post" action="#">
+                <div class="form-group">
+                    <input type="text" name="text" value="" placeholder="Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" value="" placeholder="Email Address" required>
+                </div>
+                <div class="form-group">
+                    <textarea placeholder="Message" rows="5"></textarea>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="theme-btn">Submit now</button>
+                </div>
+            </form>
+        </div>
+
+        <!--Social Icons-->
+        <div class="social-style-one">
+            <a href="{{settings.twitter}}"><i class="fab fa-twitter"></i></a>
+            <a href="{{settings.facebook}}"><i class="fab fa-facebook-f"></i></a>
+            <a href="{{settings.instagram}}"><i class="fab fa-instagram"></i></a>
+            <a href="{{settings.pinterest}}"><i class="fab fa-pinterest-p"></i></a>
+        </div>
+    </div>
+</section>
+<!--End Hidden Sidebar -->
+
+
+
+{% block content %}
+
+{% endblock  %}
+
+
+
+
+
+    <!-- Footer Area Start -->
+    <footer class="main-footer bg-blue text-white pt-75">
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="col-lg-3 col-sm-4">
+                    <div class="footer-widget about-widget">
+                        <h5 class="footer-title">{{about.title}}</h5>
+                        <p>{{ about.content}}</p>
+                        <h5 class="pt-5">Follow Us</h5>
+                        <div class="social-style-one">
+                            <a target='_blank' href="{{settings.facebook}}"><i class="fab fa-facebook-f"></i></a>
+                            <a target='_blank'  href="{{settings.twitter}}"><i class="fab fa-twitter"></i></a>
+                            <a target='_blank' href="{{settings.linkedin}}"><i class="fab fa-linkedin-in"></i></a>
+                            <a target='_blank'  href="{{settings.youtube}}"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-4">
+                    <div class="footer-widget menu-widget">
+                        <h5 class="footer-title">{{courses.title}}</h5> {% for item in courses.cou_points.all %}
+                        <ul>
+                            <li><a href="{% url item.url %}">{{ item.title }}</a></li>
+                        </ul>{% endfor %}
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-4">
+                    <div class="footer-widget menu-widget">
+                        <h5 class="footer-title">{{resources.title}}</h5>
+                        {% for item in resources.res_points.all %}
+                        <ul>
+                            <li><a href="{% url item.url %}">{{ item.title }}</a></li>
+                        </ul>{% endfor %}
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="footer-widget contact-info-widget">
+                                <h5 class="footer-title">Get In Touch</h5>
+                                <ul>
+                                    <li><i class="fas fa-map-marker-alt"></i> {{settings.adress}}</li>
+                                    <li><i class="far fa-envelope"></i> <a href=""><span class="__cf_email__" data-cfemail="14676164647b6660547379757d783a777b79">{{settings.email}}</span></a></li>
+                                    <li><i class="fas fa-phone"></i> <a href="callto:{{settings.phone}}">{{settings.phone}}</a></li>
+                                    <li><i class="far fa-clock"></i>{{settings.worktime|safe}}</li>
+                                    
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="footer-widget video-widget">
+                                <p>Quis autem vel eum iure repre enderit voluptate</p>
+                                <div class="video-widget overlay my-20">
+                                    <img src="{% static 'core/images/footer/video.jpg'%}" alt="Video">
+                                    <a href="https://www.youtube.com/watch?v=9Y7ma241N8k" class="mfp-iframe video-play"><i class="fas fa-play"></i></a>
+                                </div>
+                                <a href="about.html" class="read-more">view more <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright-area bg-dark-blue rel">
+            <div class="container">
+                <div class="copyright-inner">
+                    <p>{{settings.year}} <a href="{% url 'home'%}">Wellern</a> All rights reserved.</p>
+                    <ul class="footer-menu">
+                        <li><a href="faqs.html">Faqs</a></li>
+                        <li><a href="contact.html">Links</a></li>
+                        <li><a href="{% url 'about'%}">About</a></li>
+                        <li><a href="{% url 'contact'%}">Payments</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Scroll Top Button -->
+            <button class="scroll-top scroll-to-target" data-target="html"><span class="fas fa-angle-double-up"></span></button>
+        </div>
+    </footer>
+    <!-- Footer Area End -->
+    
+</div>
+<!--End pagewrapper-->
+
+
+<!--====== Jquery ======-->
+<script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="{%static 'core/js/jquery-3.6.0.min.js'%}"></script>
+<!--====== Bootstrap ======-->
+<script src="{%static 'core/js/bootstrap.min.js'%}"></script>
+<!--====== Appear Js ======-->
+<script src="{%static 'core/js/appear.min.js'%}"></script>
+<!--====== Slick ======-->
+<script src="{%static 'core/js/slick.min.js'%}"></script>
+<!--====== jQuery UI ======-->
+<script src="{%static 'core/js/jquery-ui.min.js'%}"></script>
+<!--====== Isotope ======-->
+<script src="{%static 'core/js/isotope.pkgd.min.js'%}"></script>
+<!--====== Circle Progress bar ======-->
+<script src="{%static 'core/js/circle-progress.min.js'%}"></script>
+<!--====== Images Loader ======-->
+<script src="{%static 'core/js/imagesloaded.pkgd.min.js'%}"></script>
+<!--====== Nice Select ======-->
+<script src="{%static 'core/js/jquery.nice-select.min.js'%}"></script>
+<!--====== Magnific Popup ======-->
+<script src="{%static 'core/js/jquery.magnific-popup.min.js'%}"></script>
+<!--  WOW Animation -->
+<script src="{%static 'core/js/wow.min.js'%}"></script>
+<!-- Custom script -->
+<script src="{%static 'core/js/script.js'%}"></script>
+
+
+<script src="{% static 'core/js/index.js' %}"></script>
+
+<script src="{% static 'core/js/teze.js' %}"></script>
+
+</body>
+
+</html>
