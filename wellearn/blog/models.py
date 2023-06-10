@@ -7,7 +7,7 @@ from django.utils.text import slugify
 class Blog(models.Model):
     title = models.CharField(_("Title"), max_length=70)
     content = models.TextField(_("Content"), blank=True)
-    published_at = models.DateTimeField(_("Published_at"), auto_now_add=True)
+    published_at = models.DateTimeField(_("Published_at"), auto_now_add=False, )
     blog_image = models.ImageField(_("Image"), upload_to="BlogIMG")
     slug = models.SlugField(unique=True)
     blog_author = models.ForeignKey(
