@@ -18,9 +18,27 @@ from .abstract_models import AbstractBaseModel
 
 
 class Account(AbstractUser):
+
+
+    GENDERS = (
+        (None, "Not chosen"),
+        ("M", "Male"),
+        ("F", "Female"),
+    )
+
+
+
+
+
     username = models.CharField(_('username'), max_length=255, blank=True, null=True)
     email = models.EmailField(_("email address"), unique=True, null=True)
     image = models.ImageField(_('Image'), upload_to='UserImage', null=True, blank=True)
+    gender = models.TextField(
+        _("Gender"),
+        choices=GENDERS, null=True, blank=True
+    )
+
+
 
     USERNAME_FIELD = "email"
     REQUIRED_FIELDS = ["username"]

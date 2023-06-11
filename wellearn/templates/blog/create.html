@@ -1,5 +1,5 @@
 {% extends 'base/base.html' %}
-{% load static costum_tags%}
+{% load static costum_tags widget_tweaks%}
 {% block content %}
 
 <br>
@@ -20,30 +20,32 @@
 
                       <div class="col-md-4">
                         <label class="mt-4"  for="{{ form.title.id_for_label }}">Title:</label>
-                        {{ form.title }}
+                        {% render_field form.title type="text" placeholder="Blog title..." style="opacity: 0.8;" %}
+
                       </div>
 
                       <div class="col-md-4">
                         <label class="mt-4"  for="{{ form.content.id_for_label }}">Content:</label>
-                        {{ form.content }}
+                          {% render_field form.content type="text" placeholder="Blog content..." style="opacity: 0.8;" %}
+
                       </div>
 
                       <div class="col-md-4">
                         <label class="mt-4"  for="{{ form.blog_image.id_for_label }}">Image:</label>
-                        {{ form.blog_image }}
+                          {% render_field form.blog_image type="file" %}
+
                       </div>
 
                       <div class="col-md-4 ">
                       <label type="date" class="mt-4"  for="{{ form.published_at.id_for_label }}">Published at:</label>
-
-                      {{ form.published_at }}
-
-
+                      {% render_field form.published_at type="date" %}
                     </div>
 
                       <div class="form-group col-md-4" >
                         <label class="mt-4"  for="{{ form.category.id_for_label }}">Category:</label>
-                        {{ form.category }}
+                          {% render_field form.category type="RadioSelect" %}
+
+
                       </div>
 
                 <div class="col-md-4">

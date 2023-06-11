@@ -136,3 +136,4 @@ GitHub.sublime-settings
 !.vscode/extensions.json
 .history
 bin/dev/pgdb/
+bin/dev/redisdb/

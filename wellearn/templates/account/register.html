@@ -1,5 +1,5 @@
 {% extends 'base/base.html' %}
-{% load static costum_tags%}
+{% load static costum_tags widget_tweaks%}
 {% block content %}
 
 <br>
@@ -17,13 +17,46 @@
                <h2>Registration:</h2>
            </div>
            
-            <div class="row mt-25">
+            <div class="row mt-25" style="display: block;" >
                 <div class="col-md-4">
-                  
                     <div class="form-group">
-                      {{form}}
+                      <label class="mt-4"  for="{{ form.first_name.id_for_label }}">First name:</label>
+                          {% render_field form.first_name type="text" placeholder="Your name" style="opacity: 0.8;" %}
                     </div>
                 </div>
+                 <div class="col-md-4">
+                    <div class="form-group">
+                      <label class="mt-4"  for="{{ form.last_name.id_for_label }}">Last name:</label>
+                          {% render_field form.last_name type="text" placeholder="Surname name" style="opacity: 0.8;" %}
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                      <label class="mt-4"  for="{{ form.gender.id_for_label }}">Gender:</label>
+                          {% render_field form.gender type="RadioSelect" %}
+                    </div>
+                </div>
+
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <label class="mt-4"  for="{{ form.email.id_for_label }}">Email:</label>
+                          {% render_field form.email type="email" placeholder="your_eamil@example.com" style="opacity: 0.8;" %}
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="form-group">
+                      <label class="mt-4"  for="{{ form.password1.id_for_label }}">Password:</label>
+                          {% render_field form.password1 type="password" placeholder="*********" style="opacity: 0.8;" %}
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                      <label class="mt-4"  for="{{ form.password2.id_for_label }}">Retry password:</label>
+                          {% render_field form.password2 type="password" placeholder="*********" style="opacity: 0.8;" %}
+                    </div>
+                </div>
+
 
                 <div class="col-md-12">
                     <div class="form-group mb-0">

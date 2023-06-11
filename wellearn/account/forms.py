@@ -22,7 +22,8 @@ class UserRegisterForm(UserCreationForm):
     password2 = forms.CharField(widget=forms.PasswordInput(attrs={
         'placeholder': '*********'
     }))
+    gender = forms.RadioSelect()
     
     class Meta:
         model = Account
-        fields = ['first_name', 'last_name', 'email', 'password1', 'password2']
+        fields = ['first_name', 'last_name', 'gender', 'email', 'password1', 'password2' ]

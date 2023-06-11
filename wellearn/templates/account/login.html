@@ -1,5 +1,5 @@
 {% extends 'base/base.html' %}
-{% load static costum_tags%}
+{% load static costum_tags widget_tweaks%}
 {% block content %}
 <br>
 <br>
@@ -21,16 +21,20 @@
                  <h2>Log in:</h2>
              </div>
              
-              <div class="row mt-25">
+              <div class="row mt-25 " style="display: block;">
                   <div class="col-md-4">
-                      <div class="form-group">
-                        {{form}}
-                      </div>
+                        <label class="mt-4"  for="{{ form.username.id_for_label }}">Email:</label>
+                          {% render_field form.username type="email" placeholder="your_eamil@example.com" style="opacity: 0.8;" %}
+                  </div>
+
+                  <div class="col-md-4">
+                        <label class="mt-4"  for="{{ form.password.id_for_label }}">Password:</label>
+                          {% render_field form.password type="password" placeholder="********" style="opacity: 0.8;" %}
                   </div>
   
                   <div class="col-md-12">
                       <div class="form-group  mb-0">
-                          <button type="submit" class="theme-btn"> Sign in</button>
+                          <button type="submit" class="theme-btn mt-30"> Sign in</button>
                       </div>
                   </div>
               </div>
